@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Page from "../src/Layout/Containers/Page"
 import { SITE_TITLE } from "./_document"
 import Section from "../src/Builder/Containers/Section"
+import Toolbar from "../src/Builder/Containers/Toolbar";
 
 const EMPTY_SECTION = {}
 
@@ -89,23 +90,16 @@ export default class Home extends Component {
   render() {
     return (
       <div className="page">
-        <div className="editor">
+        <Toolbar
+          onAdd={() => this.addSection(EMPTY_SECTION)}
+          onSave={() => this.save()}
+        />
+        <Editor>
           {this.renderSections()}
-          <AddButton
-            className="section_add"
-            onClick={() => this.addSection(EMPTY_SECTION)}
-          >
-            add section
-          </AddButton>
-        </div>
+        </Editor>
       </div>
     )
   }
 }
 
-const AddButton = ({ children, ...rest }) => (
-  <button {...rest}>
-    <i />
-    <span>{children}</span>
-  </button>
-)
+const Editor = ({children}) => <div className="editor">{children}</div>

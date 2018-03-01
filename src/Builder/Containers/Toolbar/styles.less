@@ -1,0 +1,53 @@
+
+.toolbar {
+  height: 64px;
+  background-color: #222635;
+
+  display: flex;
+  justify-content: space-between;
+
+  .button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    min-width: 90px;
+
+    &:active,
+    &:focus {
+      padding: 1px 0px 0px 0px;
+    }
+
+    i {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+    }
+
+    span {
+      margin-top: 6px;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .section_add {
+    i {
+      background-repeat: no-repeat;
+      background-image: url("./assets/add.svg");
+    }
+  }
+
+  .save{
+    i {
+      background-repeat: no-repeat;
+      background-image: url("./assets/save.svg");
+    }
+  }
+}
