@@ -1,0 +1,61 @@
+@import "./reset.less";
+
+html,
+body {
+  height: 100%;
+}
+
+div#__next {
+  height: 100%;
+  > div {
+    height: 100%;
+  }
+}
+
+body {
+  color: #000;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 20px;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+a {
+  color: #4e5367;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+
+  &:visited {
+    color: rgb(118, 152, 175);
+    border-bottom-color: rgba(118, 152, 175, 0.6);
+    transition-property: border-bottom, border-color, background, color, fill;
+    transition-duration: 0.33s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover {
+    color: rgb(42, 46, 62);
+    border-color: rgba(42, 46, 62, 0.6);
+    transition: none;
+  }
+
+  &.dashed {
+    color: #0064a8;
+    cursor: pointer;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+  }
+
+  &.current {
+    color: inherit;
+    border-bottom: rgba(42, 46, 62, 0.6) 0px solid;
+
+    &:hover {
+      color: inherit;
+      border-bottom: rgba(42, 46, 62, 0.6) 0px solid;
+    }
+  }
+}

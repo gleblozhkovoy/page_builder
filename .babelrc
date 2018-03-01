@@ -1,0 +1,14 @@
+{
+  "presets": ["next/babel", "es2015", "stage-0"],
+  "env": {
+    "development": {
+      "plugins": ["inline-dotenv",  "transform-decorators-legacy", "transform-class-properties"]
+    },
+    "production": {
+      "plugins": ["transform-inline-environment-variables", "transform-decorators-legacy", "transform-class-properties"]
+    },
+    "stage": {
+      "plugins": ["transform-inline-environment-variables", "transform-decorators-legacy", "transform-class-properties"]
+    }
+  }
+}
