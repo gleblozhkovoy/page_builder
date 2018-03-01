@@ -7,7 +7,6 @@ const webpack = require("webpack")
 const prod = process.env.NODE_ENV === "production"
 
 module.exports = withLess({
-  assetPrefix: prod ? "/paperless/" : "",
   exportPathMap: function() {
     return {
       "/": { page: "/" }

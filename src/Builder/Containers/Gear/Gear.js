@@ -7,7 +7,7 @@ export const CHANGE_BG = 'bg_change'
 export const SET_IMG = 'bg_image_change'
 export const CHANGE_COLOR = 'text_color_change'
 
-const DEFAULT_BG_IMAGE = 'https://xtensio.com/wp-content/uploads/2017/02/Xtensio_Dark_Background_2880-1.jpg'
+const DEFAULT_BG_IMAGE = 'https://i.ytimg.com/vi/DKbkKJWYT6E/maxresdefault.jpg'
 
 const DEFAULT_OPTIONS = [
   {title: 'Delete', action: DELETE},
@@ -43,8 +43,6 @@ export default class Gear extends Component {
     if (action === SET_IMG) {
       args.backgroundImage = `url("${DEFAULT_BG_IMAGE}")`
       args.backgroundSize = 'contain'
-      
-      debugger;
     }
     
     this.props.onAction(action, args)
